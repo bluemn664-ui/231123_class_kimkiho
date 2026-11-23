@@ -1,0 +1,453 @@
+/* ===== 기본 설정 ===== */
+:root {
+  --bg: #f6f1ec;
+  --card: #fffdfb;
+  --text: #4a4040;
+  --muted: #9a8c88;
+  --accent: #c48b8b;
+  --accent-soft: #f3e3e1;
+  --line: #ece3dd;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Gowun Dodum', sans-serif;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+.card {
+  max-width: 430px;
+  margin: 0 auto;
+  background: var(--card);
+  min-height: 100vh;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.05);
+}
+
+/* ===== 메인 ===== */
+.hero {
+  text-align: center;
+  padding: 56px 24px 48px;
+}
+
+.hero-date {
+  font-family: 'Gowun Batang', serif;
+  letter-spacing: 0.3em;
+  color: var(--accent);
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+.hero-photo {
+  aspect-ratio: 3 / 4;
+  border-radius: 200px 200px 8px 8px;
+  background: linear-gradient(160deg, #f3dcd8 0%, #e9cfc4 45%, #d8bfb6 100%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 32px;
+  margin-bottom: 32px;
+}
+
+.hero-photo span {
+  font-family: 'Gowun Batang', serif;
+  font-style: italic;
+  color: #fff;
+  font-size: 28px;
+  letter-spacing: 0.05em;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hero-names {
+  font-family: 'Gowun Batang', serif;
+  font-size: 26px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  margin-bottom: 12px;
+}
+
+.hero-names .amp {
+  color: var(--accent);
+  margin: 0 6px;
+}
+
+.hero-info {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* ===== 공통 섹션 ===== */
+.section {
+  padding: 56px 28px;
+  text-align: center;
+  border-top: 1px solid var(--line);
+}
+
+.section-title {
+  font-family: 'Gowun Batang', serif;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.35em;
+  color: var(--accent);
+  margin-bottom: 28px;
+}
+
+.hint {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 12px;
+}
+
+/* 스크롤 등장 애니메이션 */
+.fade {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade.show {
+  opacity: 1;
+  transform: none;
+}
+
+/* ===== 인사말 ===== */
+.greeting {
+  font-family: 'Gowun Batang', serif;
+  font-size: 15px;
+  line-height: 2.1;
+  margin-bottom: 36px;
+}
+
+.parents p {
+  font-size: 15px;
+  margin: 4px 0;
+}
+
+.parents span {
+  color: var(--muted);
+}
+
+.parents strong {
+  font-weight: 400;
+  font-size: 17px;
+  margin-left: 6px;
+}
+
+/* ===== 달력 ===== */
+.calendar-caption {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px 0;
+  padding: 20px 8px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  font-size: 14px;
+}
+
+.calendar .dow {
+  font-size: 12px;
+  color: var(--muted);
+  padding-bottom: 6px;
+}
+
+.calendar .day {
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+.calendar .sun { color: #d07070; }
+.calendar .sat { color: #7a8fb8; }
+
+.calendar .wedding {
+  background: var(--accent);
+  color: #fff;
+  font-weight: 700;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.countdown div {
+  width: 64px;
+  padding: 10px 0;
+  background: var(--accent-soft);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.countdown strong {
+  font-size: 22px;
+  font-weight: 400;
+  font-family: 'Gowun Batang', serif;
+}
+
+.countdown span {
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: 0.1em;
+}
+
+.dday-text {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.dday-text em {
+  font-style: normal;
+  color: var(--accent);
+}
+
+/* ===== 갤러리 ===== */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+}
+
+.gallery-item {
+  aspect-ratio: 1;
+  border-radius: 6px;
+  background: linear-gradient(135deg, hsl(var(--hue), 45%, 88%), hsl(var(--hue), 35%, 76%));
+  color: rgba(255, 255, 255, 0.9);
+  font-family: 'Gowun Batang', serif;
+  font-size: 20px;
+  transition: transform 0.2s;
+}
+
+.gallery-item:hover {
+  transform: scale(0.97);
+}
+
+/* 라이트박스 */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 15, 15, 0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.lightbox[hidden] {
+  display: none;
+}
+
+.lightbox-img {
+  width: min(85vw, 400px);
+  aspect-ratio: 3 / 4;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-family: 'Gowun Batang', serif;
+  font-size: 48px;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  color: #fff;
+  font-size: 36px;
+}
+
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 48px;
+  padding: 16px;
+}
+
+.lightbox-nav.prev { left: 4px; }
+.lightbox-nav.next { right: 4px; }
+
+/* ===== 오시는 길 ===== */
+.venue-name {
+  font-family: 'Gowun Batang', serif;
+  font-size: 18px;
+}
+
+.venue-address {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+.map {
+  height: 220px;
+  border-radius: 10px;
+  background:
+    repeating-linear-gradient(0deg, transparent 0 39px, #e3dad3 39px 40px),
+    repeating-linear-gradient(90deg, transparent 0 39px, #e3dad3 39px 40px),
+    #f2ece6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.directions {
+  text-align: left;
+  margin-top: 32px;
+  font-size: 14px;
+}
+
+.directions dt {
+  color: var(--accent);
+  font-weight: 700;
+  margin-top: 14px;
+}
+
+.directions dd {
+  padding-left: 2px;
+}
+
+/* ===== 버튼 ===== */
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border: 1px solid var(--accent);
+  border-radius: 30px;
+  color: var(--accent);
+  font-size: 14px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+.btn-small {
+  flex-shrink: 0;
+  padding: 6px 14px;
+  border-radius: 6px;
+  background: var(--accent-soft);
+  font-size: 12px;
+}
+
+/* ===== 계좌번호 ===== */
+.account-group {
+  margin-bottom: 12px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: left;
+}
+
+.account-toggle {
+  width: 100%;
+  padding: 14px 18px;
+  text-align: left;
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  background: #fbf7f4;
+}
+
+.account-toggle::after {
+  content: '⌄';
+  transition: transform 0.3s;
+}
+
+.account-toggle[aria-expanded="true"]::after {
+  transform: rotate(180deg);
+}
+
+.account-list {
+  list-style: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+.account-group.open .account-list {
+  max-height: 300px;
+}
+
+.account-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 18px;
+  border-top: 1px solid var(--line);
+  font-size: 14px;
+}
+
+.account-list small {
+  color: var(--muted);
+}
+
+.bank {
+  color: var(--accent);
+}
+
+/* ===== 하단 ===== */
+.footer {
+  padding-bottom: 72px;
+}
+
+.thanks {
+  margin-top: 28px;
+  font-family: 'Gowun Batang', serif;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* 토스트 */
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 40px;
+  transform: translate(-50%, 20px);
+  background: rgba(60, 50, 50, 0.9);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s, transform 0.3s;
+  z-index: 200;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}

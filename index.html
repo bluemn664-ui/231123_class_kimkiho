@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>김기호 ♥ 이미옥 결혼합니다</title>
+  <meta name="description" content="2027년 4월 17일 토요일 오후 12시 30분, 저희 두 사람의 결혼식에 초대합니다.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Gowun+Dodum&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="card">
+
+    <!-- 메인 -->
+    <section class="hero">
+      <p class="hero-date">2027. 04. 17</p>
+      <div class="hero-photo" aria-hidden="true">
+        <span>Wedding Day</span>
+      </div>
+      <h1 class="hero-names">
+        김기호 <span class="amp">&amp;</span> 이미옥
+      </h1>
+      <p class="hero-info">2027년 4월 17일 토요일 오후 12시 30분<br>더채플 웨딩홀 3층 그랜드홀</p>
+    </section>
+
+    <!-- 인사말 -->
+    <section class="section fade">
+      <h2 class="section-title">INVITATION</h2>
+      <p class="greeting">
+        서로가 마주보며 다져온 사랑을<br>
+        이제 함께 한 곳을 바라보며<br>
+        걸어가고자 합니다.<br><br>
+        저희 두 사람의 새로운 시작을<br>
+        따뜻한 마음으로 축복해 주시면<br>
+        더없는 기쁨으로 간직하겠습니다.
+      </p>
+      <div class="parents">
+        <p><span>김OO · 박OO</span>의 아들 <strong>기호</strong></p>
+        <p><span>이OO · 최OO</span>의 딸 <strong>미옥</strong></p>
+      </div>
+    </section>
+
+    <!-- 달력 & D-Day -->
+    <section class="section fade">
+      <h2 class="section-title">WEDDING DAY</h2>
+      <p class="calendar-caption">2027년 4월 17일 토요일 오후 12시 30분</p>
+      <div class="calendar" id="calendar"></div>
+      <div class="countdown" id="countdown">
+        <div><strong id="cd-days">0</strong><span>DAYS</span></div>
+        <div><strong id="cd-hours">0</strong><span>HOUR</span></div>
+        <div><strong id="cd-mins">0</strong><span>MIN</span></div>
+        <div><strong id="cd-secs">0</strong><span>SEC</span></div>
+      </div>
+      <p class="dday-text" id="dday-text"></p>
+    </section>
+
+    <!-- 갤러리 -->
+    <section class="section fade">
+      <h2 class="section-title">GALLERY</h2>
+      <div class="gallery" id="gallery">
+        <button class="gallery-item" data-index="0" style="--hue: 350">1</button>
+        <button class="gallery-item" data-index="1" style="--hue: 20">2</button>
+        <button class="gallery-item" data-index="2" style="--hue: 40">3</button>
+        <button class="gallery-item" data-index="3" style="--hue: 200">4</button>
+        <button class="gallery-item" data-index="4" style="--hue: 150">5</button>
+        <button class="gallery-item" data-index="5" style="--hue: 280">6</button>
+      </div>
+      <p class="hint">사진을 누르면 크게 볼 수 있어요</p>
+    </section>
+
+    <!-- 오시는 길 -->
+    <section class="section fade">
+      <h2 class="section-title">LOCATION</h2>
+      <p class="venue-name">더채플 웨딩홀 3층 그랜드홀</p>
+      <p class="venue-address" id="venue-address">서울특별시 강남구 테헤란로 123</p>
+      <div class="map" aria-label="지도 영역">
+        <span>지도 영역<br><small>카카오맵 / 네이버지도 API 연동 위치</small></span>
+      </div>
+      <button class="btn" data-copy="서울특별시 강남구 테헤란로 123">주소 복사하기</button>
+      <dl class="directions">
+        <dt>지하철</dt>
+        <dd>2호선 강남역 3번 출구 도보 5분</dd>
+        <dt>버스</dt>
+        <dd>강남역 정류장 하차 (140, 402, 421)</dd>
+        <dt>주차</dt>
+        <dd>건물 지하 주차장 2시간 무료</dd>
+      </dl>
+    </section>
+
+    <!-- 마음 전하실 곳 -->
+    <section class="section fade">
+      <h2 class="section-title">마음 전하실 곳</h2>
+      <div class="account-group">
+        <button class="account-toggle" aria-expanded="false">신랑측 계좌번호</button>
+        <ul class="account-list">
+          <li>
+            <div><span class="bank">국민은행</span> 123-456-789012<br><small>신랑 김기호</small></div>
+            <button class="btn-small" data-copy="국민은행 123-456-789012">복사</button>
+          </li>
+          <li>
+            <div><span class="bank">신한은행</span> 110-123-456789<br><small>신랑 아버지 김OO</small></div>
+            <button class="btn-small" data-copy="신한은행 110-123-456789">복사</button>
+          </li>
+        </ul>
+      </div>
+      <div class="account-group">
+        <button class="account-toggle" aria-expanded="false">신부측 계좌번호</button>
+        <ul class="account-list">
+          <li>
+            <div><span class="bank">우리은행</span> 1002-123-456789<br><small>신부 이미옥</small></div>
+            <button class="btn-small" data-copy="우리은행 1002-123-456789">복사</button>
+          </li>
+          <li>
+            <div><span class="bank">하나은행</span> 123-456789-01234<br><small>신부 어머니 최OO</small></div>
+            <button class="btn-small" data-copy="하나은행 123-456789-01234">복사</button>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 공유 -->
+    <section class="section footer fade">
+      <button class="btn" id="share-btn">청첩장 링크 공유하기</button>
+      <p class="thanks">함께해 주셔서 감사합니다</p>
+    </section>
+  </main>
+
+  <!-- 갤러리 모달 -->
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="lightbox-close" aria-label="닫기">&times;</button>
+    <button class="lightbox-nav prev" aria-label="이전">&#8249;</button>
+    <div class="lightbox-img" id="lightbox-img"></div>
+    <button class="lightbox-nav next" aria-label="다음">&#8250;</button>
+  </div>
+
+  <!-- 토스트 메시지 -->
+  <div class="toast" id="toast"></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
